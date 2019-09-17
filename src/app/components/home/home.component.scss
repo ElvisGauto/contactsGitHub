@@ -1,16 +1,13 @@
-// .contenedor{
-//     height: 615px;  
-//     margin-top: -8px; 
-//     text-align: center;
-//     &__parrafo, h1{
-//         color: white;
-//     }   
-//     &__parrafo{
-//         text-align: justify;
-//         width: 900px;
-//         margin-left: 100px;
-//     }
-// }
+@import "../../../styles/tools.scss";
 
+:host { 
+    width: 100%; 
+    @include flex-row-center-center;
+};
+
+.container {
+    width: 70%;
+    height: 100%;
+}
 
 
