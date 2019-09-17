@@ -1,0 +1,42 @@
+@import '../../styles/tools.scss';
+
+:host { width: 100%; };
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 114px;
+    flex-wrap: wrap;
+    @include color-background;
+    &__logotipo a{
+        font-family: fantasy;
+        font-size: 35px;
+        color: #000;
+        text-decoration: none;
+    }
+    &__menu-container {
+        &__navegador {
+            &__ul-content {
+                margin: 0;
+            }
+        }
+        &__navegador li{
+            display: inline-block;
+        }
+        &__navegador li a{
+            font-family: fantasy;
+            font-size: 25px;
+            color: #000;
+            padding: 10px;
+            border-radius: 2px;
+            text-decoration: none;
+        }
+        &__navegador li a:hover{
+            color: #fff;
+            background: #1798af;
+            text-decoration: none;
+        }
+    }
+}
+
