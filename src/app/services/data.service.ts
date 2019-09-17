@@ -9,9 +9,7 @@ import { Post } from '../components/user/Post';
 })
 export class DataService {
 
-  constructor(private http: HttpClient) { 
-    console.log("service is working!")
-  }
+  constructor(private http: HttpClient) { }
 
   // ----- get data by http ----
   getData(){
