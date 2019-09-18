@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
 
-import { RegisterComponent } from './register/register.component';
+import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { UserListItemComponent } from './user-list-item/user-list-item.component';
@@ -17,13 +17,13 @@ import { SharedModule } from '../shared/shared.module';
         SharedModule
     ],
     declarations: [
-        RegisterComponent,
+        ContactComponent,
         UserComponent,
         HomeComponent,
         UserListItemComponent
     ],
     exports: [
-        RegisterComponent,
+        ContactComponent,
         UserComponent,
         HomeComponent,
         UserListItemComponent

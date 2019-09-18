@@ -2,20 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms'; 
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss']
 })
-export class RegisterComponent{
+export class ContactComponent{
 
-  formRegister: FormGroup;
+  formContact: FormGroup;
 
   constructor(private fb: FormBuilder) {
     
   }
 
   ngOnInit() {
-    this.formRegister = this.fb.group({
+    this.formContact = this.fb.group({
       name: ['', [ Validators.required, Validators.maxLength(50) ]],
       email: ['', [Validators.required,
         /* tslint:disable */

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { RegisterComponent } from './components/register/register.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "contactUs",component: RegisterComponent },
+  { path: "contactUs",component: ContactComponent },
   { path: "users", component: UserComponent },
   { path: "home", component: HomeComponent }
 ];
