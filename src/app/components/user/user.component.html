@@ -2,7 +2,7 @@
 <div class="container">
   <nav class="container__nav">
     <ul class="container__nav__ul">
-        <div class="container__nav__ul__cargar" [hidden]="posts.length > 0">
+        <div class="container__nav__ul__loading" [hidden]="posts.length > 0">
           Cargando usuarios...
         </div>
         <li *ngFor="let user of posts" class="container__nav__ul__mi-link">
