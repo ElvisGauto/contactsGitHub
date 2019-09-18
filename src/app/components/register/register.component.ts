@@ -16,18 +16,18 @@ export class RegisterComponent{
 
   ngOnInit() {
     this.formRegister = this.fb.group({
-      name: ['', [ Validators.required ]],
+      name: ['', [ Validators.required, Validators.maxLength(50) ]],
       email: ['', [Validators.required,
         /* tslint:disable */
         Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]],
         /* tslint:enable */
-      phone: ['', [ Validators.required ]],
+      phone: ['', [ Validators.required, Validators.maxLength(15) ]],
       message: ['', [Validators.maxLength(120)]]
     });
   }
 
   sendData() {
-    alert('¡Datos enviados! listo, pronto estaremos en contacto')
+    alert("Data sent! ready, we'll be in touch soon");
   }
 
 }

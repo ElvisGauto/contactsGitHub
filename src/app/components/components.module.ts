@@ -6,13 +6,15 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { UserListItemComponent } from './user-list-item/user-list-item.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
     imports:[
         FormsModule,
         ReactiveFormsModule,
-        MaterialModule
+        MaterialModule,
+        SharedModule
     ],
     declarations: [
         RegisterComponent,

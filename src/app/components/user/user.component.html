@@ -2,13 +2,13 @@
 <div class="container">
   <nav class="container__nav">
     <ul class="container__nav__ul">
-        <div class="container__nav__ul__loading" [hidden]="posts.length > 0">
-          Cargando usuarios...
-        </div>
-        <li *ngFor="let user of posts" class="container__nav__ul__users">
-          <app-user-list-item [user]="user"></app-user-list-item>    
-        </li>
-      </ul>
+      <div class="container__nav__ul__loading" [hidden]="posts.length > 0">
+        Loading...
+      </div>
+      <li *ngFor="let user of posts" class="container__nav__ul__users"  matTooltip="go profile">
+        <app-user-list-item [user]="user"></app-user-list-item>    
+      </li>
+    </ul>
   </nav>  
 </div>
 

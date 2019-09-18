@@ -1,35 +1,21 @@
-<!-- <form [formGroup]="formRegister" class="formulario">
-  <h1 class="formulario_titulo">Contactenos</h1>
-  <input type="text" class="formulario__input" placeholder="Nombre">
-
-  <input type="email" class="formulario__input" placeholder="Email">
-
-  <input type="number" class="formulario__input" maxlength="12" placeholder="Telefono">
-
-  <input type="text" class="formulario__input" placeholder="Mensaje">
-
-  <input type="submit" class="formulario__submit">
-  
-</form> -->
-
-<form [formGroup]="formRegister" class="formulario">
-  <h1 class="formulario__title">Contactenos</h1>
+<form [formGroup]="formRegister" class="form">
+  <h1 class="form__title">Contact us</h1>
   <mat-form-field>
-    <mat-label>Nombre</mat-label>
-    <input class="formulario__input" matInput formControlName="name">
+    <mat-label>Name</mat-label>
+    <input class="form__input" matInput formControlName="name">
   </mat-form-field>
   <mat-form-field>
     <mat-label>Email</mat-label>
-    <input class="formulario__input" matInput formControlName="email">
+    <input class="form__input" matInput formControlName="email">
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Teléfono</mat-label>
-    <input justNumbers class="formulario__input" matInput formControlName="phone">
+    <mat-label>Phone</mat-label>
+    <input justNumbers class="form__input" matInput formControlName="phone">
   </mat-form-field>
-  <mat-form-field hintLabel="Máximo 120 caracteres">
-    <mat-label>Mensáje</mat-label>
-    <textarea class="formulario__input" matInput formControlName="message"></textarea>
+  <mat-form-field hintLabel="Maximum 120 characters">
+    <mat-label>Message</mat-label>
+    <textarea class="form__input" matInput formControlName="message"></textarea>
   </mat-form-field>
 
-  <button class="formulario__submit" [disabled]="this.formRegister.invalid" (click)="sendData()">Enviar</button>
+  <button class="form__submit" [disabled]="this.formRegister.invalid" (click)="sendData()">Send</button>
 </form>
