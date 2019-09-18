@@ -5,7 +5,7 @@
         <div class="container__nav__ul__loading" [hidden]="posts.length > 0">
           Cargando usuarios...
         </div>
-        <li *ngFor="let user of posts" class="container__nav__ul__mi-link">
+        <li *ngFor="let user of posts" class="container__nav__ul__users">
           <app-user-list-item [user]="user"></app-user-list-item>    
         </li>
       </ul>
