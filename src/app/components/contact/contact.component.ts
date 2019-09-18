@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms'; 
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ContactDialogComponent } from './contact-dialog/contact-dialog.component';
 
 @Component({
   selector: 'app-contact',
@@ -10,9 +12,7 @@ export class ContactComponent{
 
   formContact: FormGroup;
 
-  constructor(private fb: FormBuilder) {
-    
-  }
+  constructor(private fb: FormBuilder, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.formContact = this.fb.group({
@@ -26,8 +26,18 @@ export class ContactComponent{
     });
   }
 
-  sendData() {
-    alert("Data sent! ready, we'll be in touch soon");
+  openDialog(): void {
+    const dialogRef = this.dialog.open(ContactDialogComponent, {
+      width: '250px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
+
+  // sendData() {
+  //   alert("Data sent! ready, we'll be in touch soon");
+  // }
 
 }

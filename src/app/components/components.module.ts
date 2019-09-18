@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { UserListItemComponent } from './user-list-item/user-list-item.component';
 import { SharedModule } from '../shared/shared.module';
+import { ContactDialogComponent } from './contact/contact-dialog/contact-dialog.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SharedModule } from '../shared/shared.module';
         ContactComponent,
         UserComponent,
         HomeComponent,
-        UserListItemComponent
+        UserListItemComponent,
+        ContactDialogComponent
     ],
     exports: [
         ContactComponent,
