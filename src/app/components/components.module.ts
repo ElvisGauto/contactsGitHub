@@ -9,6 +9,13 @@ import { UserListItemComponent } from './user-list-item/user-list-item.component
 import { SharedModule } from '../shared/shared.module';
 import { ContactDialogComponent } from './contact/contact-dialog/contact-dialog.component';
 
+let COMPONENTS = [
+    ContactComponent,
+    UserComponent,
+    HomeComponent,
+    UserListItemComponent,
+    ContactDialogComponent
+]
 
 @NgModule({
     imports:[
@@ -18,17 +25,10 @@ import { ContactDialogComponent } from './contact/contact-dialog/contact-dialog.
         SharedModule
     ],
     declarations: [
-        ContactComponent,
-        UserComponent,
-        HomeComponent,
-        UserListItemComponent,
-        ContactDialogComponent
+        ...COMPONENTS
     ],
     exports: [
-        ContactComponent,
-        UserComponent,
-        HomeComponent,
-        UserListItemComponent
+        ...COMPONENTS
     ]
 })
 
