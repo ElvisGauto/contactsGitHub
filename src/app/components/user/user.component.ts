@@ -9,12 +9,12 @@ import { SpinnerService } from 'src/app/services/spinner.service';
 })
 export class UserComponent implements OnInit {
   
-  private posts = [];
+  posts = [];
 
   constructor( private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getData().subscribe(data=> {
+    this.dataService.getData().subscribe(data => {
       this.posts = data;
     })
   }
