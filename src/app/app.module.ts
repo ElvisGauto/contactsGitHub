@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { ComponentsModule } from './components/components.module';
 
-import { DataService } from './services/data.service';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -32,7 +31,7 @@ import { FooterComponent } from './footer/footer.component';
     MaterialModule,
     ComponentsModule
   ],
-  providers: [DataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

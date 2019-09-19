@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data.service';
-import { SpinnerService } from 'src/app/services/spinner.service';
+import { DataService } from '../../shared/services/data.service';
 
 @Component({
   selector: 'app-user',
