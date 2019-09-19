@@ -1,7 +1,9 @@
-<h1 mat-dialog-title>Hi</h1>
-<div mat-dialog-content>
-  <p>Data sent! ready, we'll be in touch soon</p>
-</div>
-<div mat-dialog-actions>
-  <button mat-button >Ok</button>
+<div class="dialog">
+  <h1 class="dialog__title">Data sent</h1>
+  <div class="dialog__content-paragraph">
+    <p>Ready! we'll be in touch soon</p>
+  </div>
+  <div class="dialog__content-button">
+    <button mat-button (click)="onNoClick()">Ok</button>
+  </div>
 </div>

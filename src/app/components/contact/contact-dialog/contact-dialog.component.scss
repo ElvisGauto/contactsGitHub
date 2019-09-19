@@ -1,0 +1,21 @@
+@import "../../../../styles/tools.scss";
+
+.dialog {
+    width: 400px;
+    height: auto;
+    @include flex-col-center-center;
+    &__title {
+        font-size: 25px;
+    }
+    &__content-paragraph {
+        margin-bottom: 20px;
+    }
+    &__content-button {
+        width: 100px;
+        border: 1px solid;
+        @include flex-col-center-center;
+        .mat-button {
+            width: 100%;
+        }
+    }
+}

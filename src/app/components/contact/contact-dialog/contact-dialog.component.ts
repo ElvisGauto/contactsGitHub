@@ -8,11 +8,10 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class ContactDialogComponent {
 
-  constructor(
-    public dialogRef: MatDialogRef<ContactDialogComponent>) {}
+  constructor(public dialogRef: MatDialogRef<ContactDialogComponent>) {}
 
-  onNoClick(): void {
-    this.dialogRef.close();
+  onNoClick() {
+    this.dialogRef.close(true);
   }
 
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms'; 
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ContactDialogComponent } from './contact-dialog/contact-dialog.component';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +13,11 @@ export class ContactComponent{
 
   formContact: FormGroup;
 
-  constructor(private fb: FormBuilder, public dialog: MatDialog) { }
+  constructor(
+    private fb: FormBuilder, 
+    public dialog: MatDialog,
+    private router: Router
+    ) { }
 
   ngOnInit() {
     this.formContact = this.fb.group({
@@ -26,18 +31,20 @@ export class ContactComponent{
     });
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(ContactDialogComponent, {
-      width: '250px'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = true;
+    const dialogRef = this.dialog.open(ContactDialogComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe(
+      (response) => {
+        if (response) {
+          this.goToHome();
+        }
+      });
   }
 
-  // sendData() {
-  //   alert("Data sent! ready, we'll be in touch soon");
-  // }
+  goToHome() {
+    this.router.navigate(['/home']);
+  }
 
 }

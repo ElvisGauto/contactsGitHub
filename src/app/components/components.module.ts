@@ -14,6 +14,9 @@ let COMPONENTS = [
     UserComponent,
     HomeComponent,
     UserListItemComponent,
+]
+
+let MODALS = [
     ContactDialogComponent
 ]
 
@@ -25,11 +28,14 @@ let COMPONENTS = [
         SharedModule
     ],
     declarations: [
-        ...COMPONENTS
+        ...COMPONENTS,
+        ...MODALS
     ],
     exports: [
-        ...COMPONENTS
-    ]
+        ...COMPONENTS,
+        ...MODALS
+    ],
+    entryComponents: [...MODALS]
 })
 
 export class ComponentsModule {
