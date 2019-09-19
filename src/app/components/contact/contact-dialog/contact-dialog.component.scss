@@ -1,9 +1,13 @@
 @import "../../../../styles/tools.scss";
+@import "../../../../styles/settings.variable.scss";
 
 .dialog {
-    width: 400px;
+    width: 100%;
     height: auto;
     @include flex-col-center-center;
+    @media (min-width: $breakpoint-tablet) {
+        width: 400px;    
+    }
     &__title {
         font-size: 25px;
     }
